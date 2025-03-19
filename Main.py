@@ -1,14 +1,22 @@
 from Teacher import Teacher
-from Student import Student
-from Lesson import Lesson
-from Course_Day_Time import Time
 
-teacher = Teacher('王老師', '123456', '123456@gmail.com')
-student = Student('林同學', '人工智慧應用工程系', '四技日間部', '四慧二甲')
-lesson = Lesson('系統架構', '4106', '選修', '人工智慧系')
-time = Time('星期三', '2', '4')
+teacher_name_list=['王老師','朱老師','陳老師']
+teacher_list=[]
+for i in range(len(teacher_name_list)):
+    teacher = Teacher(teacher_name_list[i])
+    teacher_list.append(teacher)
+print(teacher_list)
 
-teacher.getTeacher()
-student.getStudent()
-lesson.getCourse()
-time.getTime()
+print('====================')
+for i in range(len(teacher_name_list)):
+    print(str(i),':',teacher_name_list[i])
+print('====================')
+
+print('[Message End]')
+
+#teacher1 = Teacher('王老師')
+#teacher2 = Teacher('朱老師')
+
+
+#teacher = Teacher()
+#teacher.getName()
